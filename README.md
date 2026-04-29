@@ -32,25 +32,23 @@ The application follows a 4-step image processing pipeline to simulate a hand-dr
 
 
 ---
+## 🛠️ Installation Steps:
 
-## 🛠️ Installation & Local Setup
-
-### 1. Clone the repository
+1.  Clone this repository
 ```bash
-git clone [https://github.com/Mafi-Jangra/Image-To-Sketch.git]
-# Create virtual environment
+git clone [https://github.com/Mafi-Jangra/Image-To-Sketch.git](https://github.com/Mafi-Jangra/Image-To-Sketch.git)
+2. Navigate to the project directory:
+cd Image-To-Sketch
+3. Create Virtual Environment
 python -m venv venv
-
-# Activate (Windows)
-.\venv\Scripts\activate
-
-# Activate (Mac/Linux)
-source venv/bin/activate
-#Install Dependencies
+4. Activate the virtual environment
+venv\Scripts\activate
+5. Install Requirements
 pip install -r requirements.txt
-#Run the App
+6. Run the application
 streamlit run sketch.py
-## 📂 Requirements
+
+Requirements
 - streamlit
 - opencv-python-headless
 - numpy
