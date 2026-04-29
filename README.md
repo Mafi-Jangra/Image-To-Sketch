@@ -1,77 +1,147 @@
-🎨 AI Image to Pencil Sketch Converter
+<h1 align="center">🚀 Project Name</h1>
 
-A powerful computer vision application that transforms any photo into a professional pencil sketch using mathematical image processing.
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?size=25&duration=4000&color=00F7FF&center=true&vCenter=true&width=500&lines=Welcome+to+My+Project!;Modern+%26+Clean+UI;Open+Source+❤️;Built+with+Passion" />
+</p>
 
-🚀 Live Demo
+<p align="center">
+  <img src="https://img.shields.io/github/stars/yourusername/repo?color=blue&style=for-the-badge" />
+  <img src="https://img.shields.io/github/forks/yourusername/repo?color=purple&style=for-the-badge" />
+  <img src="https://img.shields.io/github/issues/yourusername/repo?color=red&style=for-the-badge" />
+  <img src="https://img.shields.io/github/license/yourusername/repo?color=green&style=for-the-badge" />
+</p>
 
-You can view the live application here:
+---
 
-👉 Click here to try the App
+## 🌟 About The Project
 
-✨ Features
+> ✨ A powerful and modern project designed to solve real-world problems with clean UI and optimized performance.
 
-Instant Conversion: Process images in real-time.
+💡 This project focuses on:
 
-Dual Support: Works with local PC paths and web uploads.
+* High performance ⚡
+* Clean UI 🎨
+* Scalable architecture 🏗️
 
-Downloadable Output: Save your sketch directly as a PNG.
+---
 
-Responsive UI: Clean sidebar and layout built with Streamlit.
+## 🔥 Live Demo
 
-🛠️ Installation Steps:
+<p align="center">
+  <a href="#"><img src="https://img.shields.io/badge/Visit-Live%20Demo-00C853?style=for-the-badge&logo=vercel"></a>
+</p>
 
-Clone this repository
+---
 
-git clone [https://github.com/Mafi-Jangra/Image-To-Sketch.git](https://github.com/Mafi-Jangra/Image-To-Sketch.git)
+## 🧠 Features
 
+✨ Smart and modern features:
 
-Navigate to the project directory:
+✔️ Fully responsive design
+✔️ Fast and optimized
+✔️ Easy to use UI
+✔️ Secure system
+✔️ Open source
 
-cd Image-To-Sketch
+---
 
+## 🛠️ Tech Stack
 
-Create Virtual Environment (Using venv)
+<p align="center">
 
-python -m venv venv
+<img src="https://skillicons.dev/icons?i=html,css,js,react,node,mongodb" />
 
+</p>
 
-Activate the virtual environment (On Windows):
+---
 
-venv\Scripts\activate
+## 📸 Preview
 
+<p align="center">
+  <img src="https://via.placeholder.com/700x350" />
+</p>
 
-Install Requirements
+---
 
-pip install -r requirements.txt
+## ⚙️ Installation
 
+```bash id="0bhhpn"
+git clone https://github.com/yourusername/repo.git
+cd repo
+npm install
+```
 
-Run the application
+---
 
-streamlit run sketch.py
+## ▶️ Run Locally
 
+```bash id="rx4l4m"
+npm start
+```
 
-📦 Requirements
+---
 
-streamlit
+## 📂 Project Structure
 
-opencv-python-headless
+```id="y7z9fj"
+src/
+ ┣ components/
+ ┣ pages/
+ ┣ assets/
+ ┗ App.js
+```
 
-numpy
+---
 
-Pillow
+## 📊 GitHub Stats
 
-🧠 How It Works
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=tokyonight" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=yourusername&theme=tokyonight" />
+</p>
 
-The application follows a 4-step image processing pipeline:
+---
 
-Grayscale: Removes color information.
+## 🤝 Contributing
 
-Inversion: Flips the pixel values to create a negative.
+Want to contribute? Awesome!
 
-Gaussian Blur: Softens the edges of the negative image.
+```bash id="qf2m5o"
+git checkout -b feature/your-feature
+```
 
-Color Dodge: Blends the original grayscale with the blurred negative to highlight edges.
+Then create a Pull Request 🚀
 
-📝 License
+---
 
-Distributed under the MIT License.
+## 🐛 Bug / Issue
+
+If you find any issue, open one here:
+👉 https://github.com/yourusername/repo/issues
+
+---
+
+## 📜 License
+
+Licensed under MIT License 📄
+
+---
+
+## 🙌 Support
+
+⭐ Star this repo if you like it
+💬 Share with others
+
+---
+
+## 👨‍💻 Author
+
+**Your Name**
+
+<p align="center">
+  <a href="https://github.com/yourusername">
+    <img src="https://img.shields.io/badge/GitHub-Profile-black?style=for-the-badge&logo=github">
+  </a>
+</p>
+
+---
