@@ -2,43 +2,49 @@ import streamlit as st
 import cv2
 import numpy as np
 import os
+from PIL import Image
 
-# 1. Page Setup
-st.set_page_config(page_title="My Sketch App", layout="wide")
-st.title("🎨 Image to Pencil Sketch: Local PC Version")
+st.set_page_config(page_title="Pencil Sketcher", layout="wide")
+st.title("🎨 Image to Pencil Sketch Converter")
 
-# 2. 
-# Update 'your_photo.jpg' to the actual name of your image file
-image_folder = r'C:\Users\mafij\OneDrive\Documents\Image To Sketch'
-image_name = 'virat.jpg' # <--- CHANGE THIS to your filename (e.g., 'test.jpg')
-full_path = os.path.join(image_folder, image_name)
+# --- 1. LOCAL PATH SETUP ---
+# We keep your path here for local testing
+local_path = r'C:\Users\mafij\OneDrive\Documents\Image To Sketch\virat.jpg'
 
-# 3. Processing Logic
-if os.path.exists(full_path):
-    # Read the image from your PC
-    img = cv2.imread(full_path)
-    
-    # Convert to Sketch
+# --- 2. IMAGE SELECTION LOGIC ---
+img = None
+
+# First, try to see if we can find the local file (works on your PC)
+if os.path.exists(local_path):
+    st.sidebar.success("Found local image: virat.jpg")
+    img = cv2.imread(local_path)
+    source = "Local PC File"
+else:
+    # If on the web, the local path fails, so we show the uploader
+    st.sidebar.info("Running in Cloud Mode")
+    uploaded_file = st.file_uploader("Upload an image", type=["jpg", "png", "jpeg"])
+    if uploaded_file is not None:
+        file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
+        img = cv2.imdecode(file_bytes, 1)
+        source = "Uploaded File"
+
+# --- 3. PROCESSING & DISPLAY ---
+if img is not None:
+    # Processing steps
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     inv = 255 - gray
     blur = cv2.GaussianBlur(inv, (21, 21), 0)
     sketch = cv2.divide(gray, 255 - blur, scale=256.0)
 
-    # 4. Display on the Web Page (The blank screen you saw)
+    # Display columns
     col1, col2 = st.columns(2)
-    
     with col1:
-        st.header("Original Image")
-        # OpenCV uses BGR, Streamlit needs RGB or it looks blue
+        st.header("Original")
         st.image(img, channels="BGR", use_container_width=True)
-        
     with col2:
-        st.header("Pencil Sketch")
+        st.header("Sketch")
         st.image(sketch, use_container_width=True)
-        
-    st.success(f"Successfully loaded: {image_name}")
-
+    
+    st.write(f"Currently displaying: **{source}**")
 else:
-    st.error("Image Not Found!")
-    st.write(f"I am looking for the image here: `{full_path}`")
-    st.info("Check if the filename inside the code matches your actual image file name.")
+    st.warning("No image found. Please upload an image using the button above.")
