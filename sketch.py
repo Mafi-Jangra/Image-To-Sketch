@@ -7,7 +7,7 @@ import os
 st.set_page_config(page_title="My Sketch App", layout="wide")
 st.title("🎨 Image to Pencil Sketch: Local PC Version")
 
-# 2. YOUR EXACT PC PATH
+# 2. 
 # Update 'your_photo.jpg' to the actual name of your image file
 image_folder = r'C:\Users\mafij\OneDrive\Documents\Image To Sketch'
 image_name = 'virat.jpg' # <--- CHANGE THIS to your filename (e.g., 'test.jpg')
